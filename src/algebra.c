@@ -13,13 +13,43 @@ Matrix create_matrix(int row, int col)
 Matrix add_matrix(Matrix a, Matrix b)
 {
     // ToDo
-    return create_matrix(0, 0);
+    if (a.rows != b.rows || a.cols != b.cols)
+    {
+        printf("Error: Matrix a and b must have the same rows and cols.\n");
+        return create_matrix(0, 0);
+    }
+    else
+    {
+        int rows = a.rows;
+        int cols = a.cols;
+        Matrix ans = create_matrix(rows, cols);
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                ans.data[i][j] = a.data[i][j] + b.data[i][j];
+
+        return ans;
+    }
 }
 
 Matrix sub_matrix(Matrix a, Matrix b)
 {
     // ToDo
-    return create_matrix(0, 0);
+    if (a.rows != b.rows || a.cols != b.cols)
+    {
+        printf("Error: Matrix a and b must have the same rows and cols.\n");
+        return create_matrix(0, 0);
+    }
+    else
+    {
+        int rows = a.rows;
+        int cols = a.cols;
+        Matrix ans = create_matrix(rows, cols);
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                ans.data[i][j] = a.data[i][j] - b.data[i][j];
+
+        return ans;
+    }
 }
 
 Matrix mul_matrix(Matrix a, Matrix b)
