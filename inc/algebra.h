@@ -90,4 +90,22 @@ double trace_matrix(Matrix a);
 */
 void print_matrix(Matrix a);
 
+/**
+ * @brief 矩阵的子矩阵
+ * @param a 矩阵a
+ * @param i 数i
+ * @param j 数j
+ * @return 矩阵b，b为移除矩阵a的i行j列数据后的矩阵
+ */
+Matrix create_submatrix(Matrix a, int i, int j);
+
+/**
+ * @brief 交换矩阵的两行
+ * @param data 矩阵头指针
+ * @param row_1 被交换的行
+ * @param row_2 要交换的行
+ * @param col 矩阵的列数
+ */
+void swap_rows(double data[MAX_MATRIX_SIZE][MAX_MATRIX_SIZE], int row_1, int row_2, int col);
+
 #endif
