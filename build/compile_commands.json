@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/ZJU/TrainingCamp/01_BasicProgramming/HeZijue_HW1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -ID:/ZJU/TrainingCamp/01_BasicProgramming/HeZijue_HW1/inc -g -o CMakeFiles\\main.dir\\src\\algebra.c.obj -c D:\\ZJU\\TrainingCamp\\01_BasicProgramming\\HeZijue_HW1\\src\\algebra.c",
+  "file": "D:\\ZJU\\TrainingCamp\\01_BasicProgramming\\HeZijue_HW1\\src\\algebra.c",
+  "output": "CMakeFiles\\main.dir\\src\\algebra.c.obj"
+},
+{
+  "directory": "D:/ZJU/TrainingCamp/01_BasicProgramming/HeZijue_HW1/build",
+  "command": "C:\\TDM-GCC-64\\bin\\gcc.exe -ID:/ZJU/TrainingCamp/01_BasicProgramming/HeZijue_HW1/inc -g -o CMakeFiles\\main.dir\\src\\main.c.obj -c D:\\ZJU\\TrainingCamp\\01_BasicProgramming\\HeZijue_HW1\\src\\main.c",
+  "file": "D:\\ZJU\\TrainingCamp\\01_BasicProgramming\\HeZijue_HW1\\src\\main.c",
+  "output": "CMakeFiles\\main.dir\\src\\main.c.obj"
+}
+]

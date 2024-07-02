@@ -2,47 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 
-Matrix create_submatrix(Matrix a, int i, int j)
-{
-    int num = a.rows;
-    Matrix b = create_matrix(num - 1, num - 1);
-    int i_a, j_a, i_b, j_b;
-    i_a = i_b = 0;
-    while (i_a < num)
-    {
-        if (i_a == i)
-            i_a++;
-        else
-        {
-            j_a = j_b = 0;
-            while (j_a < num)
-            {
-                if (j_a == j)
-                    j_a++;
-                else
-                {
-                    b.data[i_b][j_b] = a.data[i_a][j_a];
-                    j_a++;
-                    j_b++;
-                }
-            }
-            i_a++;
-            i_b++;
-        }
-    }
-    return b;
-}
-
-void swap_rows(double data[MAX_MATRIX_SIZE][MAX_MATRIX_SIZE], int row_1, int row_2, int col)
-{
-    double temp;
-    for (int i = 0; i < col; i++)
-    {
-        temp = data[row_1][i];
-        data[row_1][i] = data[row_2][i];
-        data[row_2][i] = temp;
-    }
-}
 
 Matrix create_matrix(int row, int col)
 {
@@ -284,5 +243,47 @@ void print_matrix(Matrix a)
             printf("%-8.2f", a.data[i][j]);
         }
         printf("\n");
+    }
+}
+
+Matrix create_submatrix(Matrix a, int i, int j)
+{
+    int num = a.rows;
+    Matrix b = create_matrix(num - 1, num - 1);
+    int i_a, j_a, i_b, j_b;
+    i_a = i_b = 0;
+    while (i_a < num)
+    {
+        if (i_a == i)
+            i_a++;
+        else
+        {
+            j_a = j_b = 0;
+            while (j_a < num)
+            {
+                if (j_a == j)
+                    j_a++;
+                else
+                {
+                    b.data[i_b][j_b] = a.data[i_a][j_a];
+                    j_a++;
+                    j_b++;
+                }
+            }
+            i_a++;
+            i_b++;
+        }
+    }
+    return b;
+}
+
+void swap_rows(double data[MAX_MATRIX_SIZE][MAX_MATRIX_SIZE], int row_1, int row_2, int col)
+{
+    double temp;
+    for (int i = 0; i < col; i++)
+    {
+        temp = data[row_1][i];
+        data[row_1][i] = data[row_2][i];
+        data[row_2][i] = temp;
     }
 }
