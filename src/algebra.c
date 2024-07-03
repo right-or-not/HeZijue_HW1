@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 Matrix create_matrix(int row, int col)
 {
     Matrix m;
@@ -122,9 +121,12 @@ double det_matrix(Matrix a)
     else
     {
         int num = a.rows;
-        int ans = 0;
+        double ans = 0;
         if (num == 1)
+        {
             ans = a.data[0][0];
+            return ans;
+        }
         else
         {
             int i = 0;
@@ -134,6 +136,7 @@ double det_matrix(Matrix a)
                 Matrix b = create_submatrix(a, i, j);
                 ans = ans + pow(-1, i + j) * a.data[i][j] * det_matrix(b);
             }
+            return ans;
         }
     }
 }
@@ -177,9 +180,10 @@ int rank_matrix(Matrix a)
     if (cols < rows)
         rank = cols;
 
-    for (int i = 0; i < rank; i++)
+    int i;
+    for (i = 0; i < rank; i++)
     {
-        if (fabs(a.data[i][i]) < 1e-10)
+        while (fabs(a.data[i][i]) < 1e-10 && i < rank) 
         {
             int flag = 0;
             for (int j = i + 1; j < rows; j++)
@@ -194,7 +198,10 @@ int rank_matrix(Matrix a)
             if (flag == 0)
             {
                 rank = rank - 1;
-                continue;
+            }
+            else
+            {
+                break;
             }
         }
 
