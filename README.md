@@ -1,5 +1,6 @@
 # algebra
 <br>
+
 ## 实现思路 | Thinking
 
 1. `add_matrix`、`sub_matrix`、`mul_matrix`、`scale_matrix`、`transpose_matrix`、`trace_matrix` 等函数较容易实现；
