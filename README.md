@@ -17,7 +17,7 @@
 
 ---
 
-![Running](D:\ZJU\TrainingCamp\01_BasicProgramming\HeZijue_HW1\assets\Running.png)
+![Running](.\assets\Running.png)
 
 
 ### 1. add_matrix
