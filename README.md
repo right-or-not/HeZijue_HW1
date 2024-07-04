@@ -23,7 +23,7 @@
 ### 1. add_matrix
 ---
 
-![add_matrix](D:\ZJU\TrainingCamp\01_BasicProgramming\HeZijue_HW1\assets\add_matrix.png)
+![add_matrix](.\assets\add_matrix.png)
 ### 2. sub_matrix
 ---
 ![sub_matrix](D:\ZJU\TrainingCamp\01_BasicProgramming\HeZijue_HW1\assets\sub_matrix.png)
